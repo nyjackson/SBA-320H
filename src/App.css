@@ -13,3 +13,23 @@ ul{
   display:flex;
   justify-content:space-around;
 }
+
+#body{
+  padding-left:10%;
+}
+#list-quotes{
+  height:auto;
+  width:auto;
+}
+
+.quote{
+  border:1px solid green;
+  padding:1%;
+  text-align:center;
+}
+.quote > button {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.tag{
+  font-style: italic;
+}

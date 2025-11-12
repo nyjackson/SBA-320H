@@ -1,23 +1,29 @@
 import { useState, useReducer, useEffect } from 'react'
 import NavBar from './components/NavBar'
+import Quote from './components/Quote'
 import './App.css'
 
 function App() {
   const [favoriteList, dispatch] = useReducer(reducer, [])
   const [quoteList, setQuoteList] = useState([])
-  const apiURL = "https://supernatural-api.onrender.com/"
-  useEffect(async () => {
-    try{
+  const apiURL = "http://api.quotable.io/quotes"
+
+  useEffect(() => {
+   grabQuotes()
+  }, [])
+
+  async function grabQuotes(){
+     try{
       const connection = await fetch(apiURL)
-      const result = connection.json()
-      console.log(result)
-      setQuoteList(result)
+      const result = await connection.json()
+      console.log(result.results)
+      setQuoteList(result.results) 
     }
     catch(e){
       console.log(e)
     }
-  }, [quoteList])
-
+  }
+console.log(quoteList)
 
   function reducer(state, action){
     console.log(action)
@@ -30,13 +36,14 @@ function App() {
     }
   }
 
+  const result = quoteList.map((q) => <Quote {...q}/>)
 
   return (
     <>
       <div id = "app">
         <NavBar />
-        <div>
-          <p>Testing</p>
+        <div id ="list-quotes">
+          {result}
         </div>
       </div>
     </>

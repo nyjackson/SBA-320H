@@ -1,10 +1,13 @@
 import { useEffect } from "react";
 
-function Quote() {
-
+function Quote({author, content, tags}) {
   return (
-    <div>
-      <h2></h2>
+    <div class = "quote">
+      <h2>{content}</h2>
+      <h3>- {author}</h3>
+      <p class = "tag">{tags.join(", ")}</p>
+      <button>Favorite</button>
+      <button>Comment</button>
     </div>
   );
 }

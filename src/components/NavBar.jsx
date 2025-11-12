@@ -8,10 +8,10 @@ function NavBar() {
    <div id="nav-bar">
           <ul>
             <li>Home</li>
-            <li>Quotes</li>
+            <li>All Quotes</li>
+            <li>Random Quote</li>
             <li>Favorites</li>
             <li>Discussion</li>
-            <li>Wikipedia</li>
             <li>Account</li>
           </ul>
         </div>   
