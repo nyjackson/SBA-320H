@@ -1,21 +1,15 @@
 #app{
-  border:1px solid black;
-  display:flex;
-}
-
-h1{
-  padding-left:2%;
+  border:1px solid blue;
 }
 
 #nav-bar{
-flex-direction:column;
 border:1px solid red;
-height:100%;
-width:20%;
+width:100%;
+height:20%;
 }
 
 ul{
   list-style:none;
-  margin:auto;
-  padding:0;
+  display:flex;
+  justify-content:space-around;
 }
