@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 function Quote({author, content, tags}) {
   return (
-    <div class = "quote">
+    <div className = "quote">
       <h2>{content}</h2>
       <h3>- {author}</h3>
       {tags.length > 0 ? <p class = "tag">Tags: {tags.join(", ")}</p> : ''}

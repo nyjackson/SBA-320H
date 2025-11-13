@@ -55,8 +55,8 @@ console.log(randomQuote)
         console.log(action.payload)
         return
       case "RAND":
-        
-        return 
+        grabRandomQuote()
+        return state
         return
       default:
         return;

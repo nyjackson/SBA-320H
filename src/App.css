@@ -1,9 +1,11 @@
 #app {
   border: 1px solid blue;
+  padding-bottom:10%;
+  background-color: #DBB3B1;
 }
 
 #nav-bar {
-  border: 1px solid #220C10;
+  border-bottom: 1px solid #220C10;
   height: 20%;
   font-family: "Stack Sans Headline", sans-serif;
   display: flex;
@@ -30,9 +32,12 @@
 }
 
 .quote {
-  border: 1px solid green;
+  border-bottom: 2px solid #220C10;
   padding: 1%;
   text-align: center;
+  font-family: "Playfair Display", serif;
+  background-color: #A67F8E;
+  color:#220C10;
 }
 .quote > button {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
