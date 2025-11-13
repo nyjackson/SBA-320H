@@ -1,35 +1,52 @@
-#app{
-  border:1px solid blue;
+#app {
+  border: 1px solid blue;
 }
 
-#nav-bar{
-border:1px solid red;
-width:100%;
-height:20%;
-}
-
-ul{
-  list-style:none;
-  display:flex;
-  justify-content:space-around;
-}
-
-#body{
-  padding-left:10%;
-}
-#list-quotes{
-  height:auto;
-  width:auto;
-}
-
-.quote{
-  border:1px solid green;
+#nav-bar {
+  border: 1px solid #220C10;
+  height: 20%;
+  font-family: "Stack Sans Headline", sans-serif;
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items:center;
   padding:1%;
-  text-align:center;
+  background-color:#2C1A1D;
+} 
+
+#logo {
+  width: auto;
+  color:#DBB3B1;
+  font-family: "Great Vibes", cursive;
+
+}
+
+#body {
+  padding-left: 10%;
+}
+#list-quotes {
+  height: auto;
+  width: auto;
+}
+
+.quote {
+  border: 1px solid green;
+  padding: 1%;
+  text-align: center;
 }
 .quote > button {
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.tag{
+.tag {
   font-style: italic;
+}
+
+.link{
+color:#A67F8E;
+text-decoration:none;
+transition:color 1s;
+}
+
+.link:hover{
+  color:#C89FA3;
 }

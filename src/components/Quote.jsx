@@ -5,7 +5,7 @@ function Quote({author, content, tags}) {
     <div class = "quote">
       <h2>{content}</h2>
       <h3>- {author}</h3>
-      <p class = "tag">{tags.join(", ")}</p>
+      {tags.length > 0 ? <p class = "tag">Tags: {tags.join(", ")}</p> : ''}
       <button>Favorite</button>
       <button>Comment</button>
     </div>

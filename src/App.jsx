@@ -1,7 +1,11 @@
 import { useState, useReducer, useEffect } from 'react'
+import {Routes, Route} from 'react-router'
 import NavBar from './components/NavBar'
-import Quote from './components/Quote'
+import Home from './components/Home'
 import './App.css'
+import AllQuotes from './components/AllQuotes'
+import FavoriteQuotes from './components/FavoriteQuotes'
+import Discussion from './components/Discussion'
 
 function App() {
   const [favoriteList, dispatch] = useReducer(reducer, [])
@@ -36,16 +40,18 @@ console.log(quoteList)
     }
   }
 
-  const result = quoteList.map((q) => <Quote {...q}/>)
-
   return (
     <>
       <div id = "app">
         <NavBar />
-        <div id ="list-quotes">
-          {result}
-        </div>
+        <Routes>
+        <Route path = "/" element = {<Home/>}/>
+        <Route path = "/all" element = {<AllQuotes/>}/>
+        <Route path = "/favorites" element = {<FavoriteQuotes/>}></Route>
+        <Route path = "/discussions" element = {<Discussion/>}></Route>
+      </Routes>
       </div>
+      
     </>
   )
 }
