@@ -1,7 +1,7 @@
 #app {
   border: 1px solid blue;
   padding-bottom:10%;
-  background-color: #DBB3B1;
+  background-color: #220C10;
 }
 
 #nav-bar {
@@ -35,7 +35,7 @@
   border-bottom: 2px solid #220C10;
   padding: 1%;
   text-align: center;
-  font-family: "Playfair Display", serif;
+  font-family: "Lora", serif;
   background-color: #A67F8E;
   color:#220C10;
 }
@@ -54,4 +54,18 @@ transition:color 1s;
 
 .link:hover{
   color:#C89FA3;
+}
+
+#home{
+  display:flex;
+  flex-direction:column;
+  padding-left:6%;
+  padding-right:6%;
+  font-family: "Lora", serif;
+}
+
+h1{
+  text-align: center;
+  background-color:#A67F8E;
+  font-family: "Stack Sans Headline", sans-serif;
 }
