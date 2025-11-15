@@ -13,46 +13,46 @@ import RandomQuote from './components/RandomQuote'
 export const apiURL = "http://api.quotable.io/quotes"
 
 function App() {
-  const [quoteList, dispatch] = useReducer(reducer, [])
+  const [state, dispatch] = useReducer(reducer, {quotes: [], favorites:[]})
   
   useEffect(() => {
    //grabQuotes()
    //grabRandomQuote()
   }, [])
 
- 
-    
-console.log(quoteList)
-
-  function reducer(state, action){
-    console.log(action)
-    switch(action?.type){
-      case "INIT":
-        return state
-      case "SHOW_ALL":
-        console.log("Action Payload", action.payload)
-        state = [...action.payload]
-        return state
-      case "RAND":
-        console.log("Random Quote", action.payload)
-        return action.payload
-      case "FAVE":
-        console.log(action.payload)
-        //setFaveList(action.payload) ?page=1
-        return state
-      default:
-        return;
-    }
+  function reducer(state, action) {
+  switch(action?.type) {
+    case "INIT":
+      return { quotes: [], favorites: [] }
+    case "SHOW_ALL":
+      return { ...state, quotes: action.payload }
+    case "RAND":
+      return { ...state, quotes: action.payload }
+    case "FAVE":
+      const isFavorited = state.favorites.some(fav => fav._id == action.payload._id)
+      if (isFavorited) {
+        return {
+          ...state,
+          favorites: state.favorites.filter(fav => fav._id != action.payload._id)
+        }
+      }
+      return {
+        ...state,
+        favorites: [...state.favorites, action.payload]
+      }
+    default:
+      return state
   }
+}
 
   return (
     <>
       <div id = "app">
         <NavBar />
         <Routes>
-        <Route path = "/all" element = {<AllQuotes quoteList = {quoteList} dispatch = {dispatch}/>}/>
-        <Route path = "/random" element = {<RandomQuote quoteList = {quoteList} dispatch = {dispatch}/>}/>
-        <Route path = "/favorites" element = {<FavoriteQuotes dispatch = {dispatch}/>}></Route>
+        <Route path = "/all" element = {<AllQuotes state = {state} dispatch = {dispatch}/>}/>
+        <Route path = "/random" element = {<RandomQuote state = {state} dispatch = {dispatch}/>}/>
+        <Route path = "/favorites" element = {<FavoriteQuotes state = {state} dispatch = {dispatch}/>}></Route>
         <Route path = "/discussions" element = {<Discussion/>}></Route>
         <Route path = "/account" element = {<Account/>}></Route>
         <Route path = "*" element = {<Home/>}/>

@@ -1,19 +1,21 @@
-import {useState} from 'react'
-function Quote({q, dispatch}) {
-  const [favorite, setFavorite] = useState(false)
+function Quote({q, dispatch, favorites}) {
+  // Check if this quote is already favorited
+  const isFavorited = favorites?.some(fav => fav._id == q._id) || false
 
-  function handleFavorite(){
-    setFavorite(!favorite)
+  function handleFavorite() {
     dispatch({type: "FAVE", payload: q})
   }
+  
   return (
-    <div className = "quote">
+    <div className="quote">
       <h2>{q.content}</h2>
       <h3>- {q.author}</h3>
-      {q.tags != undefined && q.tags.length > 0 ? <p className = "tag">Tags: {q.tags.join(", ")}</p> : ''}
-      <button onClick = {handleFavorite}>{!favorite ? "Favorite" : "Unfavorite"}</button>
+      {q.tags?.length > 0 && <p className="tag">Tags: {q.tags.join(", ")}</p>}
+      <button onClick={handleFavorite}>
+        {isFavorited ? "Unfavorite" : "Favorite"}
+      </button>
     </div>
-  );
+  )
 }
 
 export default Quote;

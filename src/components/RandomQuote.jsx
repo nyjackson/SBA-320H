@@ -2,13 +2,12 @@ import { useEffect } from "react";
 import Quote from "./Quote";
 import { apiURL } from "../App";
 
-function RandomQuote({quoteList, dispatch}) {
+function RandomQuote({state, dispatch}) {
   async function grabRandomQuote() {
     try {
       const connection = await fetch(apiURL + "/random");
       const result = await connection.json();
       dispatch({type: "RAND", payload: [...result]})
-      //setRandomQuote(...result);
     } catch (e) {
       console.log(e);
     }
@@ -17,7 +16,9 @@ function RandomQuote({quoteList, dispatch}) {
     grabRandomQuote();
   }, []);
 
-  return(<Quote q = {quoteList[0]}/>)
+    return state.quotes.length > 0 ? (
+    <Quote q={state.quotes[0]} dispatch={dispatch} favorites={state.favorites}/>
+  ) : <p>Loading</p>
 }
 
 export default RandomQuote;

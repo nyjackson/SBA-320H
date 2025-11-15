@@ -2,10 +2,10 @@ import Quote from './Quote'
 import { apiURL } from '../App'
 import {useState, useEffect} from 'react'
 
-function AllQuotes({quoteList, dispatch}) {
+function AllQuotes({state, dispatch}) {
   const [pageNumber, setPageNumber] = useState(1)
 
-  const result = quoteList.map((q) => <Quote key = {q._id} q = {q} dispatch = {dispatch}/>)
+  const result = state.quotes?.map((q) => <Quote key = {q._id} q = {q} dispatch = {dispatch} favorites = {state.favorites}/>)
   
   function handlePageNav(sign){
     switch(sign){
@@ -44,7 +44,7 @@ function AllQuotes({quoteList, dispatch}) {
     <p>{pageNumber}</p>
     <button onClick = {() => {handlePageNav("+")}}>+1</button>
   </div>
-    </div>;
+  </div>;
 }
 
 export default AllQuotes;
