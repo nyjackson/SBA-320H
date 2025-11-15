@@ -14,9 +14,7 @@ export const apiURL = "http://api.quotable.io/quotes"
 
 function App() {
   const [quoteList, dispatch] = useReducer(reducer, [])
-  const [faveList, setFaveList] = useState([])
-  const [randomQuote, setRandomQuote] = useState("")
-
+  
   useEffect(() => {
    //grabQuotes()
    //grabRandomQuote()
@@ -25,7 +23,6 @@ function App() {
  
     
 console.log(quoteList)
-console.log(randomQuote)
 
   function reducer(state, action){
     console.log(action)
@@ -39,8 +36,10 @@ console.log(randomQuote)
       case "RAND":
         console.log("Random Quote", action.payload)
         return action.payload
-      case "FAVES":
-        return
+      case "FAVE":
+        console.log(action.payload)
+        //setFaveList(action.payload) ?page=1
+        return state
       default:
         return;
     }

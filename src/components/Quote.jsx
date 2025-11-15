@@ -1,11 +1,17 @@
+import {useState} from 'react'
+function Quote({q, dispatch}) {
+  const [favorite, setFavorite] = useState(false)
 
-function Quote({author, content, tags}) {
+  function handleFavorite(){
+    setFavorite(!favorite)
+    dispatch({type: "FAVE", payload: q})
+  }
   return (
     <div className = "quote">
-      <h2>{content}</h2>
-      <h3>- {author}</h3>
-      {tags != undefined ? <p className = "tag">Tags: {tags.join(", ")}</p> : ''}
-      <button>Favorite</button>
+      <h2>{q.content}</h2>
+      <h3>- {q.author}</h3>
+      {q.tags != undefined && q.tags.length > 0 ? <p className = "tag">Tags: {q.tags.join(", ")}</p> : ''}
+      <button onClick = {handleFavorite}>{!favorite ? "Favorite" : "Unfavorite"}</button>
     </div>
   );
 }

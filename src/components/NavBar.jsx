@@ -1,8 +1,8 @@
 import { useState } from "react";
 import {Link} from 'react-router'
-import logo from '../assets/react.svg'
 function NavBar() {
-  const [showNavBar, setNavBarState] = useState(true);
+
+  //const [showNavBar, setNavBarState] = useState(true);
 
 
   return (

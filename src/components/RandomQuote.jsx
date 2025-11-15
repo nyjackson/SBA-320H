@@ -17,7 +17,7 @@ function RandomQuote({quoteList, dispatch}) {
     grabRandomQuote();
   }, []);
 
-  return(<Quote {...quoteList[0]}/>)
+  return(<Quote q = {quoteList[0]}/>)
 }
 
 export default RandomQuote;

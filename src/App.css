@@ -1,25 +1,28 @@
 #app {
   border: 1px solid blue;
   padding-bottom:10%;
-  background-color: #220C10;
+  background-color: #3F4045;
+  color:#FCFCFC;
+  font-family: "Cormorant Garamond", serif;
 }
 
 #nav-bar {
   border-bottom: 1px solid #220C10;
   height: 20%;
-  font-family: "Stack Sans Headline", sans-serif;
   display: flex;
   list-style: none;
   justify-content: space-evenly;
   align-items:center;
-  padding:1%;
-  background-color:#2C1A1D;
+  padding:.5%;
+  background-color:#02111B;
+  font-family: "Cormorant Garamond", serif;
+  opacity:90%;
+
 } 
 
 #logo {
   width: auto;
-  color:#DBB3B1;
-  font-family: "Great Vibes", cursive;
+  color:#3F4045;
 
 }
 
@@ -29,15 +32,13 @@
 #list-quotes {
   height: auto;
   width: auto;
-}
+} 
 
 .quote {
   border-bottom: 2px solid #220C10;
   padding: 1%;
   text-align: center;
-  font-family: "Lora", serif;
-  background-color: #A67F8E;
-  color:#220C10;
+  color:#C5C5C5;
 }
 .quote > button {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -47,13 +48,14 @@
 }
 
 .link{
-color:#A67F8E;
+color:#FCFCFC;
 text-decoration:none;
-transition:color 1s;
+transition:color .5s;
+font-size:16pt;
 }
 
 .link:hover{
-  color:#C89FA3;
+  color:#C5C5C5;
 }
 
 #home{
@@ -61,11 +63,20 @@ transition:color 1s;
   flex-direction:column;
   padding-left:6%;
   padding-right:6%;
-  font-family: "Lora", serif;
 }
 
 h1{
   text-align: center;
-  background-color:#A67F8E;
-  font-family: "Stack Sans Headline", sans-serif;
+}
+#page-nav{
+  display: flex;
+  justify-content: center;
+  border:1px solid white;
+  align-items:center;
+  flex-direction:column;
+  
+}
+#page-nav > button {
+  
+  margin:1%;
 }
