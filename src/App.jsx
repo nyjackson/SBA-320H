@@ -1,4 +1,4 @@
-import { useState, useReducer, useEffect } from 'react'
+import { useReducer, useEffect } from 'react'
 import {Routes, Route} from 'react-router'
 import './App.css'
 
@@ -14,11 +14,6 @@ export const apiURL = "http://api.quotable.io/quotes"
 
 function App() {
   const [state, dispatch] = useReducer(reducer, {quotes: [], favorites:[]})
-  
-  useEffect(() => {
-   //grabQuotes()
-   //grabRandomQuote()
-  }, [])
 
   function reducer(state, action) {
   switch(action?.type) {
@@ -53,8 +48,8 @@ function App() {
         <Route path = "/all" element = {<AllQuotes state = {state} dispatch = {dispatch}/>}/>
         <Route path = "/random" element = {<RandomQuote state = {state} dispatch = {dispatch}/>}/>
         <Route path = "/favorites" element = {<FavoriteQuotes state = {state} dispatch = {dispatch}/>}></Route>
-        <Route path = "/discussions" element = {<Discussion/>}></Route>
-        <Route path = "/account" element = {<Account/>}></Route>
+        {/* <Route path = "/discussions" element = {<Discussion/>}></Route>
+        <Route path = "/account" element = {<Account/>}></Route> */}
         <Route path = "*" element = {<Home/>}/>
       </Routes>
       </div>

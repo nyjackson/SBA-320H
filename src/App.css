@@ -40,7 +40,7 @@
   color:#C5C5C5;
 }
 .quote > button {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Goudy Bookletter 1911", serif;
 }
 .tag {
   font-style: italic;
@@ -73,10 +73,23 @@ h1{
   justify-content: center;
   border:1px solid white;
   align-items:center;
-  flex-direction:column;
-  
+}
+#page-nav > h4{
+padding-right:1%;
 }
 #page-nav > button {
-  
+  font-family: "Goudy Bookletter 1911", serif;
   margin:1%;
+}
+#random{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+}
+#reroll-btn{
+  width:6%;
+  height:6%;
+  border-radius:70%;
+  margin:1%;
+  font-family: "Goudy Bookletter 1911", serif;
 }

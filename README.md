@@ -49,6 +49,4 @@ Containis all the React components used to craft the QuoTabler application.
 ## Notes: 
 - Discussion.jsx and Account.jsx are not in use and will be deleted if not added upon. 
 
-## Known Bugs: 
-- Once random quote is generated, you cannot re-generate another random quote by selecting "Random" from the navbar again, will implement a refresh button. 
 

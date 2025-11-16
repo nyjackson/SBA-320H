@@ -5,7 +5,7 @@ function FavoriteQuotes({ state, dispatch }) {
   return (
     <>
      {favorites.length > 0 ?
-     <div><h1>Favorite Quotes</h1> {favorites}</div> : <h1>Favorite A Quote to Get Started!</h1>}
+     <div><h1>Favorite Quotes</h1> {favorites}</div> : <h1>Favorite A Quote And View Them Here!</h1>}
     </>
   );
 }

@@ -21,12 +21,12 @@ function RandomQuote({state, dispatch}) {
   }, [dispatch]);
 
     return (
-      <>
+      <div id= "random">
       {state.quotes.length > 0 ? 
     <Quote q={state.quotes[0]} dispatch={dispatch} favorites={state.favorites}/>
    : <p>Loading</p>}
-      <button onClick = {handleReroll}>Re-roll Random</button>
-      </>
+      <button id = "reroll-btn" onClick = {handleReroll}>New Random Quote</button>
+      </div>
     )
 }
 
