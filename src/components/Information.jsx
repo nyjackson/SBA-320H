@@ -12,7 +12,7 @@ function Information({p, state, dispatch}){
         try{
             const connection = await fetch(apiUrl)
             const result = await connection.json()
-            console.log(result.breeds)
+            console.log(result)
             setInfo(result.breeds[0])
             }
             catch(e){
@@ -21,8 +21,9 @@ function Information({p, state, dispatch}){
     }
     console.log(info)
     return(
-        <div class = "info">
-            <h1>Name:</h1>
+        <div className = "info">
+            <h1>Name: {info.name}</h1>
+            <p>Temperament: {info.temperament} Life Span: {info.life_span}</p>
         </div>
     )
 
