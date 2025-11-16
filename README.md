@@ -23,7 +23,7 @@ Pre-Requisites:
 4. Open a browser and go to : http://localhost:5173 and interact!
 
 ## /components
-Containis all the React components used to craft the QuoTabler application. 
+Contains all the React components used to craft the QuoTabler application. 
 
 ### AllQuotes.jsx
 - Lists all quotes with pagination. 
