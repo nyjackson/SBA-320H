@@ -22,10 +22,8 @@ Pre-Requisites:
 3. Type in your terminal, within the repo folder: `npm run dev`
 4. Open a browser and go to : http://localhost:5173 and interact!
 
-## Folders & Files
-
 ## /components
-Containing all the React components used to craft the QuoTabler application. 
+Containis all the React components used to craft the QuoTabler application. 
 
 ### AllQuotes.jsx
 - Lists all quotes with pagination. 
@@ -40,7 +38,7 @@ Containing all the React components used to craft the QuoTabler application.
 - Navigation bar powered by React Router. 
 
 ## Quote.jsx
-- Quote component, used for all quotes. 
+- Quote component, used for all quote rendering. 
 
 ## RandomQuote.jsx
 - Displays one random quote from the collection. 
@@ -48,4 +46,9 @@ Containing all the React components used to craft the QuoTabler application.
 ## React Hooks Utilized:
 - useState, useEffect, useReducer
 
+## Notes: 
+- Discussion.jsx and Account.jsx are not in use and will be deleted if not added upon. 
+
+## Known Bugs: 
+- Once random quote is generated, you cannot re-generate another random quote by selecting "Random" from the navbar again, will implement a refresh button. 
 

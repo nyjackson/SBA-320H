@@ -3,6 +3,10 @@ import Quote from "./Quote";
 import { apiURL } from "../App";
 
 function RandomQuote({state, dispatch}) {
+
+  function handleReroll(){
+    grabRandomQuote()
+  }
   async function grabRandomQuote() {
     try {
       const connection = await fetch(apiURL + "/random");
@@ -16,9 +20,14 @@ function RandomQuote({state, dispatch}) {
     grabRandomQuote();
   }, [dispatch]);
 
-    return state.quotes.length > 0 ? (
+    return (
+      <>
+      {state.quotes.length > 0 ? 
     <Quote q={state.quotes[0]} dispatch={dispatch} favorites={state.favorites}/>
-  ) : <p>Loading</p>
+   : <p>Loading</p>}
+      <button onClick = {handleReroll}>Re-roll Random</button>
+      </>
+    )
 }
 
 export default RandomQuote;
