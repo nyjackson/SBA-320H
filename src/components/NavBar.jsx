@@ -1,10 +1,9 @@
-import { useState } from "react";
 import {Link} from 'react-router'
 function NavBar() {
 
   return (
    <div id= "nav-bar">
-    <h2 id = "logo">Q</h2>
+    <h2 id = "logo">QuoTabler</h2>
           <Link to = "/" className = "link">Home</Link>
           <Link to = "/all" className = "link">All Quotes</Link>
           <Link to = "/random" className = "link">Random</Link>

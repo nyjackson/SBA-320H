@@ -14,7 +14,7 @@ function RandomQuote({state, dispatch}) {
   }
   useEffect(() => {
     grabRandomQuote();
-  }, []);
+  }, [dispatch]);
 
     return state.quotes.length > 0 ? (
     <Quote q={state.quotes[0]} dispatch={dispatch} favorites={state.favorites}/>

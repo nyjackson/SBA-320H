@@ -34,7 +34,7 @@ function AllQuotes({state, dispatch}) {
   }
    useEffect(() => {
     grabQuotes()
-   }, [pageNumber])
+   }, [pageNumber, dispatch])
 
   //console.log("quotelist", result)
   return <div id="list-quotes"><h1>All Quotes</h1> {result}
