@@ -9,7 +9,7 @@ A React + Vite application for looking at quotes, generating a random quote, and
 
 ## Access Live Site
 
-This project is live on Netlify: 
+This project is live on Netlify: https://quotabler.netlify.app/
 
 ## Installation via Github
 

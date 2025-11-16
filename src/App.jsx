@@ -1,4 +1,4 @@
-import { useReducer, useEffect } from 'react'
+import { useReducer} from 'react'
 import {Routes, Route} from 'react-router'
 import './App.css'
 
@@ -6,11 +6,11 @@ import NavBar from './components/NavBar'
 import Home from './components/Home'
 import AllQuotes from './components/AllQuotes'
 import FavoriteQuotes from './components/FavoriteQuotes'
-import Discussion from './components/Discussion'
-import Account from './components/Account'
+// import Discussion from './components/Discussion'
+// import Account from './components/Account'
 import RandomQuote from './components/RandomQuote'
 
-export const apiURL = "http://api.quotable.io/quotes"
+export const apiURL = "https://api.quotable.io/quotes"
 
 function App() {
   const [state, dispatch] = useReducer(reducer, {quotes: [], favorites:[]})
