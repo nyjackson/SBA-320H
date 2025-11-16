@@ -4,7 +4,8 @@ A React + Vite application for looking at quotes, generating a random quote, and
 
 ## Resources:
 - https://coolors.co/02111b-3f4045-30292f-5d737e-fcfcfc
-- https://github.com/lukePeavey/quotable
+- https://api.thecatapi.com/
+- https://api.thedogapi.com/
 - https://fonts.google.com/ 
 
 ## Access Live Site
@@ -25,11 +26,13 @@ Pre-Requisites:
 ## /components
 Contains all the React components used to craft the QuoTabler application. 
 
-### AllQuotes.jsx
-- Lists all quotes with pagination. 
+### AllCats.jsx
+- Lists all cats with pagination. 
+### AllDogs.jsx
+- Lists all dogs with pagination. 
 
-### FavoriteQuotes.jsx
-- Lists all favorited quotes and renders them. 
+### Favorites.jsx
+- Lists all favorited dogs and cats then renders them and showcases information about them. 
 
 ### Home.jsx
 - Serves as the homepage with a brief introduction to the program. 
@@ -37,16 +40,14 @@ Contains all the React components used to craft the QuoTabler application.
 ## Navbar.jsx
 - Navigation bar powered by React Router. 
 
-## Quote.jsx
-- Quote component, used for all quote rendering. 
+## Animal.jsx
+- Animal component, used for all animal rendering. 
 
-## RandomQuote.jsx
-- Displays one random quote from the collection. 
+## Random.jsx
+- Displays one random cat or dog from the collection. 
 
 ## React Hooks Utilized:
 - useState, useEffect, useReducer
 
-## Notes: 
-- Discussion.jsx and Account.jsx are not in use and will be deleted if not added upon. 
 
 
