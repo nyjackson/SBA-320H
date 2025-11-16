@@ -1,7 +1,7 @@
 function Animal({ p, state, dispatch, favorites }) {
   console.log("A Cat: ", p);
 
-  const isFavorited = favorites?.some((fav) => fav._id == p._id) || false;
+  const isFavorited = favorites?.some((fav) => fav.id == p.id) || false;
 
   function handleFavorite() {
     dispatch({ type: "FAVE", payload: p });

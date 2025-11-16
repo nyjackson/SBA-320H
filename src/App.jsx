@@ -6,7 +6,6 @@ import Home from './components/Home'
 import AllCats from './components/AllCats'
 import AllDogs from './components/AllDogs'
 import Favorites from './components/Favorites'
-// /search?limit=10&page=1
 
 export const catApiURL = "https://api.thecatapi.com/v1/images/search?limit=10&page=1"
 export const dogApiURL = "https://api.thedogapi.com/v1/images/search?limit=10&page=1"
@@ -23,11 +22,11 @@ function App() {
     case "RAND":
       return { ...state, pics: action.payload }
     case "FAVE":
-      const isFavorited = state.favorites.some(fav => fav._id == action.payload._id)
+      const isFavorited = state.favorites.some(fav => fav.id == action.payload.id)
       if (isFavorited) {
         return {
           ...state,
-          favorites: state.favorites.filter(fav => fav._id != action.payload._id)
+          favorites: state.favorites.filter(fav => fav.id != action.payload.id)
         }
       }
       return {

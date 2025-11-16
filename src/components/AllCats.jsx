@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react'
 function AllCats({state, dispatch}) {
   const [pageNumber, setPageNumber] = useState(1)
 
-  const result = state.pics?.map((q) => <Animal key = {q._id} p = {q} dispatch = {dispatch} favorites = {state.favorites}/>)
+  const result = state.pics?.map((q) => <Animal key = {q.id} p = {q} dispatch = {dispatch} favorites = {state.favorites}/>)
   
   function handlePageNav(sign){
     switch(sign){

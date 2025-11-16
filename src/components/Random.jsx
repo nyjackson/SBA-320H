@@ -1,3 +1,5 @@
+import { catApiURL } from "../App"
+import { dogApiURL } from "../App"
 function Random(){
 
 }
