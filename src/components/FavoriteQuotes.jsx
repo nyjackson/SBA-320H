@@ -1,7 +1,7 @@
 import Quote from './Quote'
 function FavoriteQuotes({ state, dispatch }) {
   const favorites = state.favorites?.map((f) => 
-    <Quote q = {f} dispatch = {dispatch} favorites = {state.favorites}/>);
+    <Quote key = {f._id} q = {f} dispatch = {dispatch} favorites = {state.favorites}/>);
   return (
     <>
      {favorites.length > 0 ?

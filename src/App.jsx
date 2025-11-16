@@ -10,7 +10,7 @@ import FavoriteQuotes from './components/FavoriteQuotes'
 // import Account from './components/Account'
 import RandomQuote from './components/RandomQuote'
 
-export const apiURL = "https://api.quotable.io/quotes"
+export const apiURL = "/api/quotes"//"https://api.quotable.io/quotes"
 
 function App() {
   const [state, dispatch] = useReducer(reducer, {quotes: [], favorites:[]})
