@@ -38,6 +38,11 @@
   padding: 1%;
   text-align: center;
   color:#C5C5C5;
+
+}
+.quote > img{
+    width:500px;
+  height:400px;
 }
 .quote > button {
   font-family: "Goudy Bookletter 1911", serif;
@@ -92,4 +97,7 @@ padding-right:1%;
   border-radius:70%;
   margin:1%;
   font-family: "Goudy Bookletter 1911", serif;
+}
+.info{
+  border:1px solid black;
 }

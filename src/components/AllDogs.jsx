@@ -24,7 +24,7 @@ function AllDogs({state, dispatch}) {
   
   async function grabDogs(){
      try{
-      const connection = await fetch(dogApiURL)
+      const connection = await fetch(dogApiURL+pageNumber)
       const result = await connection.json()
       console.log("result:", result)
       dispatch({type: "SHOW_ALL", payload: result}) 

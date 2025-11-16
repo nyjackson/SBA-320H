@@ -28,6 +28,7 @@ Contains all the React components used to craft the QuoTabler application.
 
 ### AllCats.jsx
 - Lists all cats with pagination. 
+
 ### AllDogs.jsx
 - Lists all dogs with pagination. 
 
