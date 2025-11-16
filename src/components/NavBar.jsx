@@ -1,16 +1,26 @@
-import {Link} from 'react-router'
-function NavBar() {
+import { Link } from "react-router";
 
+function NavBar() {
   return (
-   <div id= "nav-bar">
-    <h2 id = "logo">QuoTabler</h2>
-          <Link to = "/" className = "link">Home</Link>
-          <Link to = "/all" className = "link">All Quotes</Link>
-          <Link to = "/random" className = "link">Random</Link>
-          <Link to = "/favorites" className = "link">Favorites</Link>
-          {/* <Link to = "/discussions" className = "link">Discussions</Link>
-          <Link to = "/account" className = "link">Account</Link> */}
-        </div>   
+    <div id="nav-bar">
+      <h2 id="logo">Chat || Chien</h2>
+      <Link to="/" className="link">
+        Home
+      </Link>
+      <Link to="/cats" className="link">
+        Cats
+      </Link>
+      <Link to="/dogs" className="link">
+        Dogs
+      </Link>
+      <Link to="/random" className="link">
+        Random
+      </Link>
+      <Link to="/favorites" className="link">
+        Favorites
+      </Link>
+      
+    </div>
   );
 }
 

@@ -1,11 +1,11 @@
-import Quote from './Quote'
-import { apiURL } from '../App'
+import Animal from './Animal'
+import {catApiURL} from '../App'
 import {useState, useEffect} from 'react'
 
-function AllQuotes({state, dispatch}) {
+function AllCats({state, dispatch}) {
   const [pageNumber, setPageNumber] = useState(1)
 
-  const result = state.quotes?.map((q) => <Quote key = {q._id} q = {q} dispatch = {dispatch} favorites = {state.favorites}/>)
+  const result = state.pics?.map((q) => <Animal key = {q._id} p = {q} dispatch = {dispatch} favorites = {state.favorites}/>)
   
   function handlePageNav(sign){
     switch(sign){
@@ -22,22 +22,23 @@ function AllQuotes({state, dispatch}) {
     }
   }
   
-  async function grabQuotes(){
+  async function grabCats(){
      try{
-      const connection = await fetch(apiURL+"?page="+pageNumber)
+      const connection = await fetch(catApiURL+pageNumber)
       const result = await connection.json()
-      dispatch({type: "SHOW_ALL", payload: result.results}) 
+      console.log("result:", result)
+      dispatch({type: "SHOW_ALL", payload: result}) 
     }
     catch(e){
       console.log(e)
     }
   }
    useEffect(() => {
-    grabQuotes()
+    grabCats()
    }, [pageNumber, dispatch])
 
   //console.log("quotelist", result)
-  return <div id="list-quotes"><h1>All Quotes</h1> {result}
+  return <div id="list-quotes"><h1>Some Cats</h1> {result}
   <div id = "page-nav">
     <h4>Page:</h4>
     {pageNumber == 1 ? '': <button onClick = {() => {handlePageNav("-")}}>-1</button>}
@@ -47,4 +48,4 @@ function AllQuotes({state, dispatch}) {
   </div>;
 }
 
-export default AllQuotes;
+export default AllCats;
