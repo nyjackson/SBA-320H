@@ -50,5 +50,8 @@ Contains all the React components used to craft the QuoTabler application.
 ## React Hooks Utilized:
 - useState, useEffect, useReducer
 
+## Bugs/Issues
+
+- Infomation.jsx does not work as intended. Commented out until fixed. 
 
 

@@ -31,10 +31,12 @@
   font-family: "Ribeye Marrow", serif;
 }
 
-#body, #favorites {
+#body{
   padding-left: 10%;
 }
-
+#fav-h1{
+  text-align:center;
+}
 .show-pics {
   width: auto;
   height: auto;
@@ -50,7 +52,7 @@
 
 .quote {
   border-bottom: 2px solid var(--olive-deep);
-  padding: 1%;
+  padding: auto;
   text-align: center;
   color: var(--cream);
   background-color: var(--olive);
@@ -119,7 +121,9 @@
 
 .info {
   border: 1px solid var(--olive-deep);
+padding-left: 1%;
 }
+
 
 .random{
   display: flex;
