@@ -17,6 +17,7 @@
 #nav-bar {
   background-color: var(--olive-deep);
   border-bottom: 1px solid var(--olive-light);
+
   height: 20%;
   display: flex;
   list-style: none;
@@ -52,10 +53,11 @@
 
 .quote {
   border-bottom: 2px solid var(--olive-deep);
-  padding: auto;
+  padding: 10%;
   text-align: center;
   color: var(--cream);
   background-color: var(--olive);
+  
 }
 
 .quote > img {
