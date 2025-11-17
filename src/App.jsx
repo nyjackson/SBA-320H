@@ -14,7 +14,11 @@ export const dogApiURL =
   "https://api.thedogapi.com/v1/images/search?limit=10&page=";
 
 function App() {
-  const [state, dispatch] = useReducer(reducer, { pics: [], favorites: [], info: {} });
+  const [state, dispatch] = useReducer(reducer, {
+    pics: [],
+    favorites: [],
+    info: {},
+  });
 
   function reducer(state, action) {
     switch (action?.type) {
@@ -25,8 +29,11 @@ function App() {
       case "RAND":
         return { ...state, pics: action.payload };
       case "INFO":
-        console.log("payload,", action.payload)
-        return { ...state, info: {...state.info, [action.payload.id]:action.payload}};
+        console.log("payload,", action.payload);
+        return {
+          ...state,
+          info: { ...state.info, [action.payload.id]: action.payload },
+        };
       case "FAVE":
         const isFavorited = state.favorites.some(
           (fav) => fav.id == action.payload.id

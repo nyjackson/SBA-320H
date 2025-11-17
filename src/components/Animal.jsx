@@ -1,5 +1,5 @@
 function Animal({ p, state, dispatch, favorites }) {
-  console.log("A Cat: ", p);
+  //console.log("A Cat: ", p);
 
   const isFavorited = favorites?.some((fav) => fav.id == p.id) || false;
 
@@ -8,7 +8,7 @@ function Animal({ p, state, dispatch, favorites }) {
   }
 
   return (
-    <div className="quote">
+    <div className="picture">
       <img src = {`${p.url}`}/>
       <button onClick={handleFavorite}>
         {isFavorited ? "Unfavorite" : "Favorite"}

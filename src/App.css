@@ -1,10 +1,10 @@
 :root {
-  --bg: #1E1F1A;
-  --olive-deep: #2D3A22;
-  --olive: #556B2F;
-  --olive-light: #A8B88A;
-  --cream: #F2EEDB;
-  --accent: #E08E45;
+  --bg: #1e1f1a;
+  --olive-deep: #2d3a22;
+  --olive: #556b2f;
+  --olive-light: #a8b88a;
+  --cream: #f2eedb;
+  --accent: #e08e45;
 }
 
 #app {
@@ -23,7 +23,7 @@
   list-style: none;
   justify-content: space-evenly;
   align-items: center;
-  padding: .5%;
+  padding: 0.5%;
   opacity: 95%;
 }
 
@@ -32,11 +32,11 @@
   font-family: "Ribeye Marrow", serif;
 }
 
-#body{
+#body {
   padding-left: 10%;
 }
-#fav-h1{
-  text-align:center;
+#fav-h1 {
+  text-align: center;
 }
 .show-pics {
   width: auto;
@@ -51,23 +51,22 @@
   padding: 1% 0;
 }
 
-.quote {
+.picture {
   border-bottom: 2px solid var(--olive-deep);
   padding: 4%;
   text-align: center;
   color: var(--cream);
   background-color: var(--olive);
-  
 }
 
-.quote > img {
+.picture > img {
   width: 500px;
   height: 400px;
   border: 1px solid var(--olive-deep);
 }
 
-.quote > button {
-  margin-left:5%;
+.picture > button {
+  margin-left: 5%;
   font-family: "Goudy Bookletter 1911", serif;
 }
 
@@ -79,7 +78,7 @@
   color: var(--olive-light);
   text-decoration: none;
   font-size: 16pt;
-  transition: color .3s;
+  transition: color 0.3s;
 }
 
 .link:hover {
@@ -123,11 +122,10 @@
 
 .info {
   border: 1px solid var(--olive-deep);
-padding-left: 1%;
+  padding-left: 1%;
 }
 
-
-.random{
+.random {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
 }

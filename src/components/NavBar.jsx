@@ -19,7 +19,6 @@ function NavBar() {
       <Link to="/favorites" className="link">
         Favorites
       </Link>
-      
     </div>
   );
 }
