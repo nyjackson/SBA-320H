@@ -8,6 +8,7 @@ function AllDogs({state, dispatch}) {
   const result = state.pics?.map((q) => <Animal key = {q.id} p = {q} dispatch = {dispatch} favorites = {state.favorites}/>)
   
   function handlePageNav(sign){
+    window.scrollTo(0, 0)
     switch(sign){
       case '+':
         if(pageNumber > 0){
@@ -38,7 +39,9 @@ function AllDogs({state, dispatch}) {
    }, [pageNumber, dispatch])
 
   //console.log("quotelist", result)
-  return <div id="list-quotes"><h1>Some Dogs</h1> {result}
+  return <div className="show-pics" id = "dogs">
+    <h1>Dogs</h1>
+    {result}
   <div id = "page-nav">
     <h4>Page:</h4>
     {pageNumber == 1 ? '': <button onClick = {() => {handlePageNav("-")}}>-1</button>}

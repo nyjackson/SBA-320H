@@ -8,10 +8,10 @@ function FavoritePictures({ state, dispatch }) {
   </div>
     );
   return (
-    <>
+    <div id = "favorites">
      {favorites.length > 0 ?
      <div><h1>Favorites</h1> {favorites}</div> : <h1>Favorite A Cat or Dog And View Them Here!</h1>}
-    </>
+    </div>
   );
 }
 

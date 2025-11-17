@@ -4,6 +4,7 @@ function Information({p, state, dispatch}){
     const isCat = p.url.includes("cat")
     const apiUrl = isCat ? `https://api.thecatapi.com/v1/images/${id}` : `https://api.thedogapi.com/v1/images/${id}`
     const [info, setInfo] = useState({})
+    const [url, setUrl] = useState()
     useEffect(()=>{
         getInformation()
     },[dispatch])

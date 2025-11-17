@@ -10,7 +10,7 @@ A React + Vite application for looking at cat or dog pictures, generating a rand
 
 ## Access Live Site
 
-This project is live on Netlify: chat-ou-chien.netlify.app
+This project is live on Netlify: [chat-ou-chien.netlify.app](https://chat-ou-chien.netlify.app/)
 
 ## Installation via Github
 

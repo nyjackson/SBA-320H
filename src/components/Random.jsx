@@ -4,19 +4,19 @@ import { useState, useEffect } from "react";
 import Animal from "./Animal";
 
 function Random({ state, dispatch }) {
-  const [flip, setFlip] = useState(Math.floor(Math.random() * 2));
+  const [flip, setFlip] = useState(false);
 
   useEffect(() => {
     grabRandomPic();
   }, [dispatch, flip]);
 
   function handleReroll() {
-    setFlip(Math.floor(Math.random() * 2));
+    setFlip(!flip);
   }
 
   async function grabRandomPic() {
     try {
-      const dogOrCat = flip == 0 ? catApiURL : dogApiURL;
+      const dogOrCat = flip ? catApiURL : dogApiURL;
       let apiUrl = dogOrCat.split("/");
       apiUrl.pop();
       apiUrl.push("search?limit=1");
@@ -32,7 +32,7 @@ function Random({ state, dispatch }) {
   }
 
   return (
-    <>
+    <div class = "random">
       {state?.pics[0] ? (
         <Animal
           p={state.pics[0]}
@@ -43,9 +43,9 @@ function Random({ state, dispatch }) {
         <p>Loading...</p>
       )}
       <button id="reroll-btn" onClick={handleReroll}>
-        New Random Pic
+        New Random Picture Or Gif
       </button>
-    </>
+    </div>
   );
 }
 
