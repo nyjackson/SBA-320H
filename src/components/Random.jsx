@@ -5,23 +5,23 @@ import Animal from "./Animal";
 
 function Random({ state, dispatch }) {
   const [flip, setFlip] = useState(Math.floor(Math.random() * 2));
-  const dogOrCat = flip == 0 ? catApiURL : dogApiURL;
-
-  let apiUrl = dogOrCat.split("/");
-  apiUrl.pop();
-  apiUrl.push("search?limit=1");
-  apiUrl = apiUrl.join("/");
 
   useEffect(() => {
     grabRandomPic();
-  }, [dispatch]);
+  }, [dispatch, flip]);
 
   function handleReroll() {
     setFlip(Math.floor(Math.random() * 2));
-    grabRandomPic();
   }
+
   async function grabRandomPic() {
     try {
+      const dogOrCat = flip == 0 ? catApiURL : dogApiURL;
+      let apiUrl = dogOrCat.split("/");
+      apiUrl.pop();
+      apiUrl.push("search?limit=1");
+      apiUrl = apiUrl.join("/");
+
       const connection = await fetch(apiUrl);
       const result = await connection.json();
       console.log("result", result);
@@ -33,11 +33,15 @@ function Random({ state, dispatch }) {
 
   return (
     <>
-      <Animal
-        p={state?.pics[0]}
-        dispatch={dispatch}
-        favorites={state.favorites}
-      />
+      {state?.pics[0] ? (
+        <Animal
+          p={state.pics[0]}
+          dispatch={dispatch}
+          favorites={state.favorites}
+        />
+      ) : (
+        <p>Loading...</p>
+      )}
       <button id="reroll-btn" onClick={handleReroll}>
         New Random Pic
       </button>

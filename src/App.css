@@ -1,27 +1,28 @@
 #app {
   border: 1px solid blue;
-  background-color: #3F4045;
-  color:#FCFCFC;
-  font-family: "Cormorant Garamond", serif;
+  background-color: #443742;
+  color:#E2E8C0;
+  font-family: "Ribeye Marrow", serif;
 }
 
 #nav-bar {
-  border-bottom: 1px solid #220C10;
+  border-bottom: 1px solid #EDD9A3;
   height: 20%;
   display: flex;
   list-style: none;
   justify-content: space-evenly;
   align-items:center;
   padding:.5%;
-  background-color:#02111B;
-  font-family: "Cormorant Garamond", serif;
+  background-color:#443742;
+ 
   opacity:90%;
 
 } 
 
 #logo {
   width: auto;
-  color:#FCFCFC;
+  color:#E2E8C0;
+  font-family: "Ribeye Marrow", serif;
 
 }
 
@@ -38,11 +39,13 @@
   padding: 1%;
   text-align: center;
   color:#C5C5C5;
+  background-color: #E2E8C0;
 
 }
 .quote > img{
     width:500px;
   height:400px;
+  border:1px solid black;
 }
 .quote > button {
   font-family: "Goudy Bookletter 1911", serif;
@@ -52,14 +55,14 @@
 }
 
 .link{
-color:#FCFCFC;
+color:#C3BF6D;
 text-decoration:none;
 transition:color .5s;
 font-size:16pt;
 }
 
 .link:hover{
-  color:#C5C5C5;
+  color:#E55934;
 }
 
 #home{
