@@ -32,7 +32,7 @@ function Random({ state, dispatch }) {
   }
 
   return (
-    <div class = "random">
+    <div className = "random">
       {state?.pics[0] ? (
         <Animal
           p={state.pics[0]}

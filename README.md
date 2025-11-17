@@ -24,7 +24,7 @@ Pre-Requisites:
 4. Open a browser and go to : http://localhost:5173 and interact!
 
 ## /components
-Contains all the React components used to craft the QuoTabler application. 
+Contains all the React components used to craft the application. 
 
 ### AllCats.jsx
 - Lists all cats with pagination. 
