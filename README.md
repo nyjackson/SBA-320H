@@ -1,6 +1,6 @@
 # Skill Based Assessment for Module 320H: React Web Application
 
-A React + Vite application for looking at quotes, generating a random quote, and favoriting quotes from Quotable's API to appreciate later. 
+A React + Vite application for looking at cat or dog pictures, generating a random dog or cat picture, and favoriting pictures to appreciate later. 
 
 ## Resources:
 - https://coolors.co/02111b-3f4045-30292f-5d737e-fcfcfc
@@ -10,7 +10,7 @@ A React + Vite application for looking at quotes, generating a random quote, and
 
 ## Access Live Site
 
-This project is live on Netlify: https://quotabler.netlify.app/
+This project is live on Netlify: chat-ou-chien.netlify.app
 
 ## Installation via Github
 
