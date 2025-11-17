@@ -4,7 +4,7 @@ import Information from './Information';
 function Favorites({ state, dispatch }) {
   const favorites = state.favorites?.map((a) => <div key = {a.id}>
   <Animal  p = {a} dispatch = {dispatch} favorites = {state.favorites}/>
-  {/* <Information p = {a} dispatch = {dispatch} favorites = {state.favorites} info = {state.info}/> */}
+  <Information p = {a} dispatch = {dispatch} favorites = {state.favorites} info = {state.info[a.id]}/>
   </div>
     );
   return (
