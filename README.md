@@ -3,7 +3,7 @@
 A React + Vite application for looking at cat or dog pictures, generating a random dog or cat picture, and favoriting pictures to appreciate later. 
 
 ## Resources:
-- https://coolors.co/02111b-3f4045-30292f-5d737e-fcfcfc
+- https://coolors.co/556b2f-f2eedb-e08e45
 - https://api.thecatapi.com/
 - https://api.thedogapi.com/
 - https://fonts.google.com/ 
